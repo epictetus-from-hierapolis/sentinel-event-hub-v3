@@ -72,6 +72,7 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
+      "^@app/infrastructure(|/.*)$": "<rootDir>/libs/infrastructure/src/$1",
       "^@app/persistence(|/.*)$": "<rootDir>/libs/persistence/src/$1",
       "^@app/shared(|/.*)$": "<rootDir>/libs/shared/src/$1"
     }

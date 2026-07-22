@@ -28,6 +28,15 @@
         "tsConfigPath": "apps/camera-agent/tsconfig.app.json"
       }
     },
+    "infrastructure": {
+      "type": "library",
+      "root": "libs/infrastructure",
+      "entryFile": "index",
+      "sourceRoot": "libs/infrastructure/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/infrastructure/tsconfig.lib.json"
+      }
+    },
     "media-worker": {
       "type": "application",
       "root": "apps/media-worker",

@@ -21,6 +21,12 @@
     "strictBindCallApply": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
+      "@app/infrastructure": [
+        "libs/infrastructure/src"
+      ],
+      "@app/infrastructure/*": [
+        "libs/infrastructure/src/*"
+      ],
       "@app/persistence": [
         "./libs/persistence/src"
       ],
@@ -33,6 +39,7 @@
       "@app/shared/*": [
         "./libs/shared/src/*"
       ]
-    }
+    },
+    "baseUrl": "./"
   }
 }
