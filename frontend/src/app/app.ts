@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { ApplicationShellComponent } from "./shell/application-shell/application-shell.component";
 import { RouterOutlet } from "@angular/router";
 
 @Component({
