@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ApplicationShellComponent } from "./shell/application-shell/application-shell.component";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
