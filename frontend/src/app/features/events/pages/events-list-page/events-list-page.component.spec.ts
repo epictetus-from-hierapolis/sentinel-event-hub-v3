@@ -1,5 +1,6 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { EventsListPageComponent } from './events-list-page.component';
 
@@ -9,7 +10,7 @@ describe('EventsListPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EventsListPageComponent],
+      imports: [EventsListPageComponent, RouterTestingModule],
       providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 

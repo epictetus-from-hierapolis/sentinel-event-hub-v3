@@ -7,8 +7,19 @@
 
   <ion-card-content>
     <p>{{ event().timestamp | date:'dd.MM.yyyy, HH:mm:ss' }}</p>
-    <ion-badge>
-      {{ event().isRead ? 'Read' : 'Unread' }}
-    </ion-badge>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-badge>
+            {{ event().isRead ? 'Read' : 'Unread' }}
+          </ion-badge>
+        </ion-col>
+        <ion-col>
+          <ion-button [routerLink]="['/events', event().id]">
+            View details
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card-content>
 </ion-card>

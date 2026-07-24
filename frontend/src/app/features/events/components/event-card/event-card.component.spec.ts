@@ -1,5 +1,6 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { EventCardComponent } from './event-card.component';
 import { Event } from '../../models/event.model';
@@ -20,7 +21,7 @@ describe('EventCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EventCardComponent],
+      imports: [EventCardComponent, RouterTestingModule],
       providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 

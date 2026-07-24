@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { EventsDataSource } from '../../data-access/events-data-source';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { EventCardComponent } from "../../components/event-card/event-card.component";
-
+import { EventCardComponent } from '../../components/event-card/event-card.component';
+import { IonContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-events-list-page',
@@ -10,18 +10,10 @@ import { EventCardComponent } from "../../components/event-card/event-card.compo
   styleUrls: ['./events-list-page.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [EventCardComponent]
+  imports: [EventCardComponent, IonContent],
 })
-export class EventsListPageComponent implements OnInit {
+export class EventsListPageComponent {
   private readonly eventsDataSource = inject(EventsDataSource);
 
-  protected readonly events = toSignal(
-    this.eventsDataSource.getEvents(),
-    { initialValue: [] }
-  );
-
-  constructor() { }
-
-  ngOnInit() { }
-
+  protected readonly events = toSignal(this.eventsDataSource.getEvents(), { initialValue: [] });
 }

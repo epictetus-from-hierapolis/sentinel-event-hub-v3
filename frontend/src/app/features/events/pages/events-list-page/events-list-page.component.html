@@ -1,3 +1,5 @@
-@for(event of events(); track event.id){
-<app-event-card [event]="event" />
-}
+<ion-content>
+    @for(event of events(); track event.id){
+    <app-event-card [event]="event" />
+    }
+</ion-content>
